@@ -32,8 +32,8 @@ def graph(x0, r, N = 100):
     x = np.linspace(0, N, N + 1)
     y = sequence(x0, r, N)
     plt.plot(x, y, 'b-')
-    plt.xlabel('x')
-    plt.ylabel('y')
+    plt.xlabel('n')
+    plt.ylabel('xn')
     plt.title('sequence(n)')
     plt.show()
 
