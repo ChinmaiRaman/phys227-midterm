@@ -18,7 +18,7 @@ Finally, to cleanly present your work, create a Jupyter notebook ```Midterm.ipyn
 
 ## Assessment
 
-
+I found the equation sneakily complicated. It was very interesting, and the graph of the bifurcations was very cool. I enjoyed the midterm.
 
 ## Honor Pledge
 
