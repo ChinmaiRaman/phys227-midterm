@@ -37,5 +37,16 @@ def graph(x0, r, N = 100):
     plt.title('sequence(n)')
     plt.show()
 
+def asymptote_graph(x0, r1, r2, mesh, N):
+    number_points = (r2 - r1) / mesh
+    rspace = np.linspace(r1, r2, number_points + 1)
+    y = [sequence(x0, elem, N)[-101:-1] for elem in rspace]
+    fig = plt.figure(1)
+    plt.plot(rspace, [elem for elem in y], 'b-')
+    plt.xlabel('r')
+    plt.ylabel('xn')
+    plt.title('xn vs. r')
+    plt.show()
+
 def test_sequence():
     assert (sequence(0.5, 3.2, 5)[2] == 0.512), "Failure"
