@@ -48,5 +48,17 @@ def asymptote_graph(x0, r1, r2, mesh, N):
     plt.title('xn vs. r')
     plt.show()
 
+def zoom_graph(x0, r1, r2, mesh, N, axis):
+    number_points = (r2 - r1) / mesh
+    rspace = np.linspace(r1, r2, number_points + 1)
+    y = [sequence(x0, elem, N)[-101:-1] for elem in rspace]
+    fig = plt.figure(1)
+    plt.plot(rspace, [elem for elem in y], 'b-')
+    plt.axis([axis[0], axis[1], axis[2], axis[3]])
+    plt.xlabel('r')
+    plt.ylabel('xn')
+    plt.title('xn vs. r')
+    plt.show()
+
 def test_sequence():
     assert (sequence(0.5, 3.2, 5)[2] == 0.512), "Failure"
